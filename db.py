@@ -4,7 +4,7 @@ import mysql.connector
 
 if __name__ == '__main__':
     dbcon = mysql.connector.connect(
-        database='dev',
+        database='analysis',
         user='root',
         password='password',
         host='db'

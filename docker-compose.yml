@@ -3,6 +3,7 @@ services:
   db:
     image: mysql
     environment:
+      - MYSQL_DATABASE=analysis
       - MYSQL_ROOT_PASSWORD=password
       - TZ=Japan
     networks:
