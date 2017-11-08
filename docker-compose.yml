@@ -10,7 +10,7 @@ services:
     ports:
       - '3306:3306'
   jupyter:
-    image: jupyter/datascience-notebook
+    build: jupyter
     volumes:
       - ./jupyter/:/home/jovyan/work/
     ports:
