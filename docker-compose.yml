@@ -9,16 +9,23 @@ services:
       - default
     ports:
       - '3306:3306'
+  jupyter:
+    image: jupyter/datascience-notebook
+    volumes:
+      - ./jupyter/:/home/jovyan/work/
+    ports:
+      - '8888:8888'
   web:
     build: .
     volumes:
-      - .:/tmp/
+      - .:/usr/src/app/
     networks:
       - default
     ports:
       - "8000:8000"
     depends_on:
       - db
+      - jupyter
     environment:
       - TZ=Japan
     tty: true

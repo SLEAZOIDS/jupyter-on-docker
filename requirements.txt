@@ -1,2 +1,1 @@
-numpy
 mysql-connector-python-rf
