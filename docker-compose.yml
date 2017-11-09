@@ -13,7 +13,7 @@ services:
   jupyter:
     build: jupyter
     volumes:
-      - ./jupyter/:/home/jovyan/work/
+      - ./jupyter/work/:/home/jovyan/work/
     ports:
       - '8888:8888'
   web:
