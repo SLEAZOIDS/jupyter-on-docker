@@ -16,7 +16,7 @@ services:
       - ./jupyter/work/:/home/jovyan/work/
     ports:
       - '8888:8888'
-  web:
+  python:
     build: .
     volumes:
       - .:/usr/src/app/
