@@ -1,6 +1,7 @@
-version: '2'
+version: '3'
 services:
   db:
+    container_name: 'jupyter_db'
     build: db
     environment:
       - MYSQL_DATABASE=analysis
@@ -11,12 +12,14 @@ services:
     ports:
       - '3306:3306'
   jupyter:
+    container_name: 'jupyter'
     build: jupyter
     volumes:
       - ./jupyter/work/:/home/jovyan/work/
     ports:
       - '8888:8888'
   python:
+    container_name: 'jupyter_python'
     build: .
     volumes:
       - .:/usr/src/app/
