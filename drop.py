@@ -7,21 +7,8 @@ if __name__ == '__main__':
         password='password',
         host='db'
     )
-    
+
     dbcur = dbcon.cursor()
 
-    # テーブルability
-    sql = 'DROP TABLE ability'
+    sql = 'DROP TABLE abilities'
     dbcur.execute(sql)
-    
-    # テーブルresponse
-    sql = 'DROP TABLE response'
-    dbcur.execute(sql)
-    
-    # テーブルresult
-    sql = 'DROP TABLE result'
-    dbcur.execute(sql)
-    
-    dbcon.commit()
-
-
